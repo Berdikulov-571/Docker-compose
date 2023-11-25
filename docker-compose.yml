@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  service-one.api:
+    image: ${DOCKER_REGISTRY-}serviceoneapi
+    build:
+      context: .
+      dockerfile: Service-One.Api/Dockerfile
+
+  service-four.api:
+    image: ${DOCKER_REGISTRY-}servicefourapi
+    build:
+      context: .
+      dockerfile: Service-Four.Api/Dockerfile
+
+
+  service-three.api:
+    image: ${DOCKER_REGISTRY-}servicethreeapi
+    build:
+      context: .
+      dockerfile: Service-Three.Api/Dockerfile
+
+
+  service-two.api:
+    image: ${DOCKER_REGISTRY-}servicetwoapi
+    build:
+      context: .
+      dockerfile: Service-Two.Api/Dockerfile
+

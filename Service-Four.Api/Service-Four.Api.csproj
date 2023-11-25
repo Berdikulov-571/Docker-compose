@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Service_Four.Api</RootNamespace>
+    <UserSecretsId>629995e5-35dd-48c4-a2e7-122d1a219d67</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Service-Four-ClassLibrary1\Service-Four-ClassLibrary1.csproj" />
+    <ProjectReference Include="..\Service-Four-ClassLibrary2\Service-Four-ClassLibrary2.csproj" />
+    <ProjectReference Include="..\Service-Four-ClassLibrary3\Service-Four-ClassLibrary3.csproj" />
+  </ItemGroup>
+
+</Project>
